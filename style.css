@@ -1,0 +1,439 @@
+:root {
+    --branco: #ffffff;
+    --dourado: #c8a349;
+    --dourado-escuro: #9c7c33;
+    --cinza-claro: #f9f9f9;
+    --texto: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--branco);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--branco);
+    color: var(--dourado-escuro);
+    text-align: center;
+    padding: 40px 20px 20px;
+    border-bottom: 2px solid var(--dourado);
+}
+
+header img {
+    border: 4px solid var(--dourado);
+    width: 140px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+h1, h2 {
+    color: var(--dourado-escuro);
+    margin-bottom: 10px;
+}
+
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--cinza-claro);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+label, select, button {
+    font-size: 16px;
+    margin-top: 10px;
+    display: block;
+}
+
+select, button {
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    margin: 10px auto;
+    border: 1px solid var(--dourado);
+    border-radius: 5px;
+}
+
+button {
+    background-color: var(--dourado);
+    color: var(--branco);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--dourado-escuro);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--branco);
+    color: var(--dourado-escuro);
+    border-top: 1px solid var(--dourado);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+    body {
+        font-size: 15px;
+    }
+
+    main {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    header img {
+        width: 100px;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    select, button {
+        width: 90%;
+    }
+
+    ul {
+        padding-left: 15px;
+    }
+}
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    background-image: url('foto de perfil site daniela.png'); /* Troque pelo nome correto da imagem */
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 0 5%;
+    color: var(--preto);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.88);
+    z-index: 1;
+}
+
+.hero-conteudo {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+}
+
+.hero-texto {
+    padding: 40px 20px;
+}
+
+.headline {
+    font-size: 2.5rem;
+    color: var(--dourado-escuro);
+    margin-bottom: 20px;
+}
+
+.subheadline {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.botao-comprar {
+    background-color: var(--dourado);
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.botao-comprar:hover {
+    background-color: var(--dourado-escuro);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .hero {
+        background-position: center right;
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+        height: auto;
+    }
+
+    .hero::before {
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero-conteudo {
+        max-width: 100%;
+    }
+}
+/* Animação base */
+.animado {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animado.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Diferentes delays para efeito em cascata */
+.delay-1 {
+    transition-delay: 0.1s;
+}
+.delay-2 {
+    transition-delay: 0.3s;
+}
+.delay-3 {
+    transition-delay: 0.5s;
+}
+  /* DEPOIMENTOS SLIDER */
+.depoimentos {
+    background-color: rgb(247, 247, 247);
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .depoimentos-container {
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
+  
+  .depoimentos h2 {
+    font-size: 2.5rem;
+    color: var(--dourado-escuro);
+    margin-bottom: 50px;
+  }
+  
+  .slider {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slide {
+    display: none;
+    background-color: #a4a4a4;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(172, 172, 172, 0.1);
+  }
+  
+  .slide.active {
+    display: block;
+  }
+  
+  .depoimento-texto {
+    font-size: 1.2rem;
+    color: black;
+    margin-bottom: 20px;
+    line-height: 1.7;
+  }
+  
+  .depoimento-autor {
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--dourado-escuro);
+  }
+  
+  /* Botões */
+  .slider-controls {
+    margin-top: 20px;
+  }
+  
+ .slider-controls {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.slider-controls button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--dourado);
+    background-color: white;
+    color: var(--dourado-escuro);
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.slider-controls button:hover {
+    background-color: var(--dourado);
+    color: white;
+    transform: scale(1.1);
+}
+
+  
+  /* RESPONSIVO */
+  @media (max-width: 768px) {
+    .depoimentos h2 {
+      font-size: 2rem;
+    }
+  
+    .depoimento-texto {
+      font-size: 1rem;
+    }
+  }
+
+.links {
+    color: var(--dourado);
+    text-decoration: none; /* remove o sublinhado, se quiser */
+}
+.links:hover{
+    color: var(--dourado-escuro); /* efeito ao passar o mouse */
+     text-decoration: underline;   /* opcional: adiciona destaque */
+}
+/* NAV DESKTOP */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: white;
+      color: var(--dourado-escuro);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      z-index: 1000;
+    }
+
+    .nav-items {
+      display: flex;
+      gap: 20px;
+    }
+
+.nav-items a,
+.sidebar a {
+  border: 1px solid var(--dourado); /* azul */
+  border-radius: 8px;
+  padding: 6px 12px;
+  transition: all 0.3s ease;
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.nav-items a:hover,
+.sidebar a:hover {
+  background-color: var(--dourado);
+  color: white;
+}
+
+/* Também adiciona um pequeno efeito ao ícone junto ao texto */
+.nav-items a span,
+.sidebar a span {
+  transition: transform 0.3s ease;
+}
+
+.nav-items a:hover span,
+.sidebar a:hover span {
+  transform: scale(1.1);
+}
+
+    /* sidebar - MOBILE */
+    .verticalbar {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .verticalbar span {
+      height: 3px;
+      width: 25px;
+      background: black;
+      margin-bottom: 4px;
+      border-radius: 2px;
+    }
+
+    /* SIDEBAR MOBILE */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background: white;
+      color: var(--dourado-);
+      display: flex;
+      flex-direction: column;
+      padding: 60px 20px;
+      transition: left 0.3s ease;
+      z-index: 1001;
+    }
+
+    .sidebar.active {
+      left: 0;
+    }
+
+    .sidebar a {
+      color: black;
+      text-decoration: none;
+      margin-bottom: 20px;
+      font-size: 18px;
+      display: flex;
+      gap: 8px;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 768px) {
+      .nav-items {
+        display: none;
+      }
+
+      .verticalbar {
+        display: flex;
+      }
+    }
+
+    section {
+      padding: 100px 20px;
+      margin-top: 60px;
+    }
