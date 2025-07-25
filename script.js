@@ -40,3 +40,12 @@ console.log("Página de vendas carregada.");
 function toggleSidebar() {
       document.getElementById('sidebar').classList.toggle('active');
     }
+const perguntas = document.querySelectorAll(".faq-pergunta");
+
+  perguntas.forEach((pergunta) => {
+    pergunta.addEventListener("click", () => {
+      pergunta.classList.toggle("active");
+      const resposta = pergunta.nextElementSibling;
+      resposta.classList.toggle("open");
+    });
+  });
