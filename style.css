@@ -129,7 +129,7 @@ footer {
     align-items: center;
     justify-content: flex-start;
     height: 100vh;
-    background-image: url('foto de perfil site daniela.png'); /* Troque pelo nome correto da imagem */
+    background-image: url('Design sem nome (5).png'); /* Troque pelo nome correto da imagem */
     background-size: cover;
     background-position: right center;
     background-repeat: no-repeat;
@@ -145,7 +145,7 @@ footer {
     left: 0;
     width: 45%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.88);
+    background: rgba(255, 255, 255, );
     z-index: 1;
 }
 
