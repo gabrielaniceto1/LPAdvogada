@@ -193,7 +193,9 @@ footer {
         padding: 40px 20px;
         height: auto;
     }
-
+    .hero-texto{
+        background-color: rgba(255,255,255, 0.88);
+    }
     .hero::before {
         width: 100%;
         height: 100%;
@@ -510,3 +512,27 @@ footer {
       font-size: 1.1rem;
     }
   }
+  .whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 30px;
+  height: 30px;
+}
